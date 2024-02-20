@@ -28,7 +28,7 @@ addon_info = {
 	"addon_summary": _("点字ディスプレイを上下サカサマにして使用するためのアドオン"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""点字ディスプレイを上下サカサマにして使用するためのアドオンです。。
+	"addon_description": _("""点字ディスプレイを上下サカサマにして使用するためのアドオンです。
 対応点字ディスプレイの点字表示、ルーティングスイッチ、一部のキーが反転します。"""),
 	# version
 	"addon_version": ADDON_VERSION,

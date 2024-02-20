@@ -1,3 +1,8 @@
+ADDON_VERSION = "0.1.0"
+ADDON_RELEASE_DATE = "2024-02-23"
+ADDON_NAME = "Up Side Braille-Down"
+ADDON_KEYWORD = "USB-D"
+
 # -*- coding: UTF-8 -*-
 
 # Build customizations
@@ -16,29 +21,29 @@ def _(arg):
 # Add-on information variables
 addon_info = {
 	# add-on Name/identifier, internal for NVDA
-	"addon_name": "addonTemplate",
+	"addon_name": ADDON_NAME,
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
-	"addon_summary": _("Add-on user visible name"),
+	"addon_summary": _("点字ディスプレイを上下サカサマにして使用するためのアドオン"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""Description for the add-on.
-It can span multiple lines."""),
+	"addon_description": _("""点字ディスプレイを上下サカサマにして使用するためのアドオンです。。
+対応点字ディスプレイの点字表示、ルーティングスイッチ、一部のキーが反転します。"""),
 	# version
-	"addon_version": "x.y",
+	"addon_version": ADDON_VERSION,
 	# Author(s)
-	"addon_author": "name <name@domain.com>",
+	"addon_author": "hrk-fujii - ACT Laboratory <support@actlab.org>",
 	# URL for the add-on documentation support
-	"addon_url": None,
+	"addon_url": "https://actlab.org/software/USB-D",
 	# URL for the add-on repository where the source code can be found
-	"addon_sourceURL": None,
+	"addon_sourceURL": "https://github.com/actlaboratory/USB-D",
 	# Documentation file name
 	"addon_docFileName": "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
-	"addon_minimumNVDAVersion": None,
+	"addon_minimumNVDAVersion": "2023.3",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": None,
+	"addon_lastTestedNVDAVersion": "2024.4",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!

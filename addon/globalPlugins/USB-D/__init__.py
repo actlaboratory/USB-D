@@ -1,3 +1,5 @@
+#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+
 import re
 import wx
 import gui

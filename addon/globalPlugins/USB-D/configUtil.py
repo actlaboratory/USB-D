@@ -1,3 +1,5 @@
+#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+
 import config
 CONFIG_GLOBAL_KEY = "actlab_USB-D_global"
 
@@ -15,4 +17,3 @@ def initializeSettings():
     config.conf[CONFIG_GLOBAL_KEY] = {
         "enableTurnOver": True
     }
-

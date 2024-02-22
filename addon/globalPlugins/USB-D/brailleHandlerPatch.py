@@ -30,10 +30,6 @@ class BrailleHandlerPatch:
     handleBgThreadExecutorOriginal = None
     
     def turnOverData(data):
-        # cut when disabled
-        if not configUtil.getEnableTurnOverSetting():
-            return data
-        
         result = []
         for d in data:
             cell = 0
@@ -42,9 +38,14 @@ class BrailleHandlerPatch:
             result.insert(0, cell)
         return result
 
-    
+    def processData(data):
+        # cut when disabled
+        if not configUtil.getEnableTurnOverSetting():
+            return data
+        else:
+            return BrailleHandlerPatch.turnOverData(data)
     def driverDisplay(data):
-        data = BrailleHandlerPatch.turnOverData(data)
+        data = BrailleHandlerPatch.processData(data)
         return BrailleHandlerPatch.driverDisplayOriginal(data)
 
     def displayPatch():

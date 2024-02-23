@@ -14,7 +14,7 @@ def _(arg):
 
 ADDON_NAME = "UpSideBraille-Down"
 ADDON_KEYWORD = "USB-D"
-ADDON_VERSION = "0.1.0"
+ADDON_VERSION = "1.0.1"
 ADDON_RELEASE_DATE = "2024-02-23"
 
 # Add-on information variables
@@ -46,11 +46,11 @@ addon_info = {
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
-	"addon_updateChannel": None,
+	"addon_updateChannel": "stable",
 	# Add-on license such as GPL 2
-	"addon_license": None,
+	"addon_license": "GPL 2",
 	# URL for the license document the ad-on is licensed under
-	"addon_licenseURL": None,
+	"addon_licenseURL": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
 }
 
 # Define the python files that are the sources of your add-on.

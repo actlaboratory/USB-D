@@ -1,11 +1,9 @@
-# Up Side Braille-Down Ver0.1.0 Instruction Manual
-
-(Updated: 2024-02-23)
+# Upside Braille-Down Instruction Manual
 
 
 ## table of contents
 
-1. About Up Side Braille-Down
+1. About Upside Braille-Down
 2. About the public location
 3. Operating environment
 4. How to use
@@ -15,11 +13,11 @@
 8. Contact information
 
 
-## 1. About Up Side Braille-Down
+## 1. About Upside Braille-Down
 
 ### overview
 
-Up Side Braille-Down (USB-D) is an add-on that allows you to use a Braille display upside down in NVDA.
+Upside Braille-Down (USB-D) is an add-on that allows you to use a Braille display upside down in NVDA.
 
 ### Features
 
@@ -44,7 +42,7 @@ Among them, those that have undergone key reversal support are marked with (key 
 This add-on is published on the following page.
 Please check the latest version of the add-on as well as information about updates.
 
-* Up Side Braille-Down page: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
+* Upside Braille-Down page: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
 
 ## 3. Operating environment
 
@@ -59,7 +57,7 @@ Please note that to use this add-on, a compatible braille display and its driver
 
 ### Toggle the inverted state of the braille display
 
-From the NVDA menu, select "Up Side Braille-Down".
+From the NVDA menu, select "Upside Braille-Down".
 
 * If you select "Flat Braille display orientation", the orientation of the Braille display will be reversed.
 * Select "Restore Braille Display Orientation" to return the Braille display to its normal orientation.
@@ -70,11 +68,11 @@ Note that when NVDA is started, the settings are the same as when it was last cl
 ### Check and perform updates
 
 Updates may be provided to this add-on to update functionality and fix defects.
-You can check for add-on updates at any time by selecting Up Side Braille-Down from the NVDA menu and clicking Check for Updates.
+You can check for add-on updates at any time by selecting Upside Braille-Down from the NVDA menu and clicking Check for Updates.
 If an update is found, you will be prompted to update. Please follow the instructions to perform the update.
 
 Additionally, this add-on has a function that automatically checks for updates when NVDA starts.
-You can change the setting by selecting "Up Side Braille-Down" from the NVDA menu and running "Disable checking for updates at startup" or "Enable checking for updates at startup".
+You can change the setting by selecting "Upside Braille-Down" from the NVDA menu and running "Disable checking for updates at startup" or "Enable checking for updates at startup".
 
 ## 5. Copyright
 

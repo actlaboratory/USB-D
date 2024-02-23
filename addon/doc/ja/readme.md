@@ -1,11 +1,9 @@
-# Up Side Braille-Down Ver0.1.0 説明書
-
-(更新:  2024-02-23)
+# Upside Braille-Down 説明書
 
 
 ## 目次
 
-1. Up Side Braille-Down について
+1. Upside Braille-Down について
 2. 公開場所について
 3. 動作環境
 4. 使い方
@@ -15,11 +13,11 @@
 8. 問い合わせ先
 
 
-## 1. Up Side Braille-Down について
+## 1. Upside Braille-Down について
 
 ### 概要
 
-Up Side Braille-Down (USB-D) は、NVDAで点字ディスプレイを上下反転状態で使用するためのアドオンです。
+Upside Braille-Down (USB-D) は、NVDAで点字ディスプレイを上下反転状態で使用するためのアドオンです。
 
 ### 特徴
 
@@ -44,7 +42,7 @@ Up Side Braille-Down (USB-D) は、NVDAで点字ディスプレイを上下反�
 本アドオンは、以下のページにて公開しております。
 最新版のアドオンとともに、更新内容なども案内しておりますのでご確認ください。
 
-* Up Side Braille-Down のページ: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
+* Upside Braille-Down のページ: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
 
 ## 3. 動作環境
 
@@ -59,7 +57,7 @@ Up Side Braille-Down (USB-D) は、NVDAで点字ディスプレイを上下反�
 
 ### 点字ディスプレイの反転状態を切り替える
 
-NVDAメニューから、「Up Side Braille-Down」を選択する。
+NVDAメニューから、「Upside Braille-Down」を選択する。
 
 * 「点字ディスプレイの向きをサカサマにする」を選択すると、点字ディスプレイの向きが反転状態になります。
 * 「点字ディスプレイの向きを元に戻す」を選択すると、点字ディスプレイが通常の向きになります。
@@ -70,11 +68,11 @@ NVDAメニューから、「Up Side Braille-Down」を選択する。
 ### アップデートの確認と実行
 
 本アドオンは、機能の更新、および不具合の修正などのため、アップデートが提供されることがあります。
-アドオンのアップデートは、NVDAメニューから「Up Side Braille-Down」を選択し、「アップデートの確認」を実行することでいつでも確認することができます。
+アドオンのアップデートは、NVDAメニューから「Upside Braille-Down」を選択し、「アップデートの確認」を実行することでいつでも確認することができます。
 アップデートが見つかると、更新を促すメッセージが表示されます。案内に従ってアップデート作業を行ってください。
 
 また、本アドオンには、NVDA起動時に自動でアップデートを確認する機能が搭載されています。
-NVDAメニューから「Up Side Braille-Down」を選択し、「起動時のアップデートの確認を無効化」あるいは「起動時のアップデートの確認を有効化」を実行することで設定を変更できます。
+NVDAメニューから「Upside Braille-Down」を選択し、「起動時のアップデートの確認を無効化」あるいは「起動時のアップデートの確認を有効化」を実行することで設定を変更できます。
 
 ## 5. 著作権
 

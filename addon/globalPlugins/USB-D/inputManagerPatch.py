@@ -1,4 +1,4 @@
-#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+#Copyright (C) 2024 Hiroki Fujii <hiroki@efuji.jp>
 
 import re
 import braille
@@ -9,12 +9,10 @@ from . import configUtil
 class InputManagerPatch():
     executeGestureOriginal = None
 
-    
     def executeGesture(self, gesture):
         # cut when disabled
         if not configUtil.getEnableTurnOverSetting():
             return InputManagerPatch.executeGestureOriginal(self, gesture)
-        
         # turn over routing switch
         if isinstance(getattr(gesture, "routingIndex", None), int) and braille.handler and braille.handler.display and gesture.routingIndex >= 0 and gesture.routingIndex < braille.handler.display.numCells:
             gesture.routingIndex = braille.handler.display.numCells - gesture.routingIndex - 1

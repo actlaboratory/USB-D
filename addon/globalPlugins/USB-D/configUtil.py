@@ -1,4 +1,4 @@
-#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+#Copyright (C) 2024 Hiroki Fujii <hiroki@efuji.jp>
 
 import config
 CONFIG_GLOBAL_KEY = "actlab_USB-D_global"

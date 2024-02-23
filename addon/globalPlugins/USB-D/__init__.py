@@ -1,4 +1,4 @@
-#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+#Copyright (C) 2024 Hiroki Fujii <hiroki@efuji.jp>
 
 import re
 import wx
@@ -31,7 +31,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             gui.mainFrame.sysTrayIcon.menu.Remove(self.rootMenuItem)
         except BaseException:
             pass
-    
+
     def _setupMenu(self):
         self.rootMenu = wx.Menu()
         
@@ -40,14 +40,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         )
         gui.mainFrame.sysTrayIcon.Bind(
             wx.EVT_MENU, self.toggleTurnOverState, self.turnOverStateToggleItem)
-        
+
         self.rootMenuItem = gui.mainFrame.sysTrayIcon.menu.Insert(
-            2, wx.ID_ANY, _("Up Side Braille-Down"), self.rootMenu)
-        
+            2, wx.ID_ANY, _("Upside Braille-Down"), self.rootMenu)
+
 
     def _turnOverStateToggleString(self):
-        return _("(点字ディスプレイの向きを元に戻す&S)") if configUtil.getEnableTurnOverSetting() else _("点字ディスプレイの向きをサカサマにする(&S)")        
-    
+        return _("(点字ディスプレイの向きを元に戻す&S)") if configUtil.getEnableTurnOverSetting() else _("点字ディスプレイの向きをサカサマにする(&S)")
+
     def toggleTurnOverState(self, evt=None):
         self.script_toggleTurnOverState()
 

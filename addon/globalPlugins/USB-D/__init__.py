@@ -51,7 +51,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 
     def _turnOverStateToggleString(self):
-        return _("(点字ディスプレイの向きを元に戻す&S)") if configUtil.getEnableTurnOverSetting() else _("点字ディスプレイの向きをサカサマにする(&S)")
+        return _("点字ディスプレイの向きを元に戻す(&S)") if configUtil.getEnableTurnOverSetting() else _("点字ディスプレイの向きをサカサマにする(&S)")
 
     def toggleTurnOverState(self, evt=None):
         self.script_toggleTurnOverState()

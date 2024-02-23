@@ -8,7 +8,7 @@ def getAutoUpdateCheckSetting():
     try:
         return config.conf[CONFIG_GLOBAL_KEY]["checkForUpdatesOnStartup"]
     except:
-        return False
+        return True
 def setAutoUpdateCheckSetting(val):
     config.conf[CONFIG_GLOBAL_KEY]["checkForUpdatesOnStartup"] = val
 
@@ -16,14 +16,10 @@ def getEnableTurnOverSetting():
     try:
         return config.conf[CONFIG_GLOBAL_KEY]["enableTurnOver"]
     except:
-        return False
+        return True
 
 def setEnableTurnOverSetting(val):
     config.conf[CONFIG_GLOBAL_KEY]["enableTurnOver"] = val
 
 def initializeSettings():
-    if not hasattr(config.conf, CONFIG_GLOBAL_KEY):
-        config.conf[CONFIG_GLOBAL_KEY] = {
-            "checkForUpdatesOnStartup": True,
-            "enableTurnOver": True
-        }
+    pass

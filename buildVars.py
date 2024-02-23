@@ -12,7 +12,7 @@
 def _(arg):
 	return arg
 
-ADDON_NAME = "Up Side Braille-Down"
+ADDON_NAME = "UpSideBraille-Down"
 ADDON_KEYWORD = "USB-D"
 ADDON_VERSION = "0.1.0"
 ADDON_RELEASE_DATE = "2024-02-23"
@@ -24,7 +24,7 @@ addon_info = {
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
-	"addon_summary": _("点字ディスプレイを上下サカサマにして使用するためのアドオン"),
+	"addon_summary": _("Upside Braille-Down"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""点字ディスプレイを上下サカサマにして使用するためのアドオンです。
@@ -42,7 +42,7 @@ addon_info = {
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": "2023.3",
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": "2024.4",
+	"addon_lastTestedNVDAVersion": "2023.3",
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
@@ -61,7 +61,7 @@ addon_info = {
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = []
+pythonSources = ["addon/globalPlugins/USB-D/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]

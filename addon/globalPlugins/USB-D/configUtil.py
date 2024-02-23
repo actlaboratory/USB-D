@@ -22,4 +22,4 @@ def setEnableTurnOverSetting(val):
     config.conf[CONFIG_GLOBAL_KEY]["enableTurnOver"] = val
 
 def initializeSettings():
-    pass
+    config.conf[CONFIG_GLOBAL_KEY] = {}

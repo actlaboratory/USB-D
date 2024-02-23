@@ -43,9 +43,9 @@ class build:
 			print("Error: no addon folder found. Your working directory must be the root of the project. You shouldn't cd to tools and run this script.")
 			exit(-1)
 
-		# addonフォルダの存在を確認
+		# 日本語翻訳ファイルの確認
 		if not os.path.exists("addon\\locale\\ja"):
-			print("Error: no addon folder found. Your working directory must be the root of the project. You shouldn't cd to tools and run this script.")
+			print("Error: Japanese translation not found. please create a folder named 'ja' in 'addon\\locale'.")
 			exit(-1)
 
 		# 前のビルドをクリーンアップ

@@ -17,25 +17,34 @@
 
 ### overview
 
-Upside Braille-Down (USB-D) is an add-on that allows you to use a Braille display upside down in NVDA.
+Upside Braille-Down (USB-D) is an add-on that allows you to use a braille display upside down in NVDA.
 
 ### Features
 
 * Braille display can be used in both upper and lower positions<br>
      By using the Braille display upside down, you can bring the PC keyboard and Braille cell closer together when using a display with the cell in front.
-*Reverse braille display and key switch
+* Invert braille display and key switches<br>
      The cell display and cursor routing switch (touch cursor keys) on compatible braille displays will be inverted.
      Additionally, line scroll keys, arrow keys, and some other braille input keys are also reversed on supported braille displays.
 * You can enable or disable inversion<br>
      You can toggle whether or not to invert the braille display from the NVDA menu, depending on the current situation.
 
-### Braille display tested and compatible with key reversal
+### Supported braille display
 
-Below are the Braille displays that the developer has confirmed to work.
-Among them, those that have undergone key reversal support are marked with (key reversal).
+Compatible braille displays are listed below.
+Please note that we are widely accepting work results for braille displays, and cannot guarantee all operations.
+The author has confirmed operation on Next Touch 40.
 
-* KGS: Next Touch 40 (key inversion)
-* Nippon Telesoft: Seika 40 version5 (key inversion)
+* KGS: Next Touch 40
+     * Key reversal: supported
+     * Operation confirmed or supported accepted versions: NVDA 2023.1, 2024.1
+* KGS: Braille Memo 32
+     * Key reversal: supported
+     * Operation confirmed or supported accepted version: NVDA 2023.1
+* Nippon Telesoft: Seika 40 version5
+     * Key reversal: supported
+     * Operation confirmed or supported accepted version: NVDA 2023.1
+
 
 ## 2. About the public location
 
@@ -44,11 +53,12 @@ Please check the latest version of the add-on as well as information about updat
 
 * Upside Braille-Down page: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
 
+
 ## 3. Operating environment
 
 To use this add-on, the following environment is required.
 
-*NVDA 2023.3 and later
+*NVDA2023.1 or later
 * Other environments where Windows and NVDA can operate comfortably
 
 Please note that to use this add-on, a compatible braille display and its driver must be set up correctly.
@@ -78,7 +88,7 @@ You can change the setting by selecting "Upside Braille-Down" from the NVDA menu
 
 (c) 2021 Hiroki Fujii - ACT Laboratory
 
-GNU General Public License, version 2 or later. (with some exceptions)
+GNU General Public License, version 2
 
 * URL: <a href="https://actlab.org/">https://actlab.org/</a>
 

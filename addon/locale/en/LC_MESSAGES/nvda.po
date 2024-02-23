@@ -6,67 +6,44 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: "
-"'UpSideBraille-Down' "
-"'0.1.0'\n"
-"Report-Msgid-Bugs-To: 'nvda-"
-"translations@groups.io'\n"
-"POT-Creation-Date: "
-"2024-02-23 11:17+0900\n"
-"PO-Revision-Date: 2024-02-23 "
-"14:13+0900\n"
+"Project-Id-Version: 'UpSideBraille-Down' '0.1.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2024-02-23 14:32+0900\n"
+"PO-Revision-Date: 2024-02-23 14:34+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; "
-"charset=UTF-8\n"
-"Content-Transfer-Encoding: "
-"8bit\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: addon\globalPlugins\USB-D\__init__.py:39
-msgid ""
-"点字ディスプレイの向きを切り"
-"替えます。"
-msgstr ""
-"Switches braille display "
-"rotation"
+#: addon\globalPlugins\USB-D\__init__.py:44
+msgid "点字ディスプレイの向きを切り替えます。"
+msgstr "Switches braille display rotation"
 
-#: addon\globalPlugins\USB-D\__init__.py:45
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on
+#. to be shown on installation and add-on information found in Add-ons Manager.
+#: addon\globalPlugins\USB-D\__init__.py:50 buildVars.py:27
 msgid "Upside Braille-Down"
 msgstr ""
 
-#: addon\globalPlugins\USB-D\__init__.py:49
-msgid ""
-"(点字ディスプレイの向きを元に"
-"戻す&S)"
-msgstr ""
-"(Use your braille display "
-"normally&S)c"
+#: addon\globalPlugins\USB-D\__init__.py:54
+msgid "点字ディスプレイの向きを元に戻す(&S)"
+msgstr "Use your braille display normally (&S)"
 
-#: addon\globalPlugins\USB-D\__init__.py:49
-msgid ""
-"点字ディスプレイの向きをサカ"
-"サマにする(&S)"
-msgstr ""
-"Use your braille display "
-"upside down(&S)"
+#: addon\globalPlugins\USB-D\__init__.py:54
+msgid "点字ディスプレイの向きをサカサマにする(&S)"
+msgstr "Use your braille display upside down(&S)"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 #: buildVars.py:30
 msgid ""
-"点字ディスプレイを上下サカサ"
-"マにして使用するためのアドオ"
-"ンです。\n"
-"対応点字ディスプレイの点字表"
-"示、ルーティングスイッチ、一"
-"部のキーが反転します。"
+"点字ディスプレイを上下サカサマにして使用するためのアドオンです。\n"
+"対応点字ディスプレイの点字表示、ルーティングスイッチ、一部のキーが反転し"
+"ます。"
 msgstr ""
-"This addon allows you to use "
-"your braille displays "
-"rotated upside down. Rotates "
-"the braille and button "
-"inputs for supported "
-"displays."
+"This addon allows you to use your braille displays rotated upside down. "
+"Rotates the braille and button inputs for supported displays."

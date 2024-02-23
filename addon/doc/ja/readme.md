@@ -1,112 +1,135 @@
-# Upside Braille-Down 説明書
+# NVDA Add-on Scons Template #
+
+This package contains a basic template structure for NVDA add-on development, building, distribution and localization.
+For details about NVDA add-on development, please see the [NVDA Add-on Development Guide](https://github.com/nvdaaddons/DevGuide/wiki/NVDA-Add-on-Development-Guide).
+The NVDA add-on development/discussion list [is here](https://nvda-addons.groups.io/g/nvda-addons)
+Information specific to NV Access add-on store [can be found here](https://github.com/nvaccess/addon-datastore).
+
+Copyright (C) 2012-2023 NVDA Add-on team contributors.
+
+This package is distributed under the terms of the GNU General Public License, version 2 or later. Please see the file COPYING.txt for further details.
 
 
-## 目次
 
-1. Upside Braille-Down について
-2. 公開場所について
-3. 動作環境
-4. 使い方
-5. 著作権
-6. ご寄付・ご協力のお願い
-7. 更新履歴
-8. 問い合わせ先
+[alekssamos](https://github.com/alekssamos/) added automatic package of add-ons through Github Actions.
+
+For details about Github Actions  please see the [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions).
+
+Copyright (C) 2022 alekssamos
 
 
-## 1. Upside Braille-Down について
+## Features
 
-### 概要
+This template provides the following features you can use during NVDA add-on development and packaging:
 
-Upside Braille-Down (USB-D) は、NVDAで点字ディスプレイを上下反転状態で使用するためのアドオンです。
+* Automatic add-on package creation, with naming and version loaded from a centralized build variables file (buildVars.py) or command-line interface.
+	* See packaging section for details on using command-line switches when packaging add-ons with custom version information.
+	* This process will happen automatically when receiving a pull request, and there is also the possibility of manual launch.
+	* To let the workflow run automatically when pushing to main or master (development) branch, remove the comment for branches line in GitHub Actions (`.github/workflows/build_addon.yml`).
+	* If you have created a tag (E.G.: `git tag v1.0 && git push --tag`), then a release will be automatically created and the add-on file will be uploaded as an asset.
+	* Otherwise, with normal commits or with manual startup, you can download the artifacts from the Actions page of your repository.
+* Manifest file creation using a template (manifest.ini.tpl). Build variables are replaced on this template. See below for add-on manifest specification.
+* Compilation of gettext mo files before distribution, when needed.
+	* To generate a gettext pot file, please run `scons pot`. An `addon-name.pot` file will be created with all gettext messages for your add-on. You need to check the `buildVars.i18nSources` variable to comply with your requirements.
+* Automatic generation of manifest localization files directly from gettext po files. Please make sure buildVars.py is included in i18nFiles.
+* Automatic generation of HTML documents from markdown (.md) files, to manage documentation in different languages.
+* Automatic generation of entries for NV Access add-on store (json format).
 
-### 特徴
+In addition, this template includes configuration files for the following tools for use in add-on development and testing (see "additional tools" section for details):
 
-* 点字ディスプレイを上下サカサマで使用可能<br>
-    点字ディスプレイを上下反転で使用することで、セルが手前にあるディスプレイを使用する際に、PCのキーボードと点字セルをより近づけることができます。
-*点字表示とキースイッチを反転
-    対応点字ディスプレイのセル表示、カーソルルーティングスイッチ（タッチカーソルキー）が反転します。
-    また、対応点字ディスプレイでは、行スクロールキー、方向キー、その他一部の点字入力キーも反転します。
-* 反転の有効と無効を切り替え可能<br>
-    NVDAメニューから点字ディスプレイを反転するかどうか、そのときの状況によって切り替えることができます。
+* Flake8 (flake8.ini): a base configuration file for Flake8 linting tool based on NVDA's own Flake8 configuration file.
+* Configuration for VS Code. It requires NVDA's repo at the same level as the add-on folder containing your actual source files, with prepared source code (`scons source`). preparing the source code is a step in the instructions for building NVDA itself, see [The NVDA Repository](https://github.com/nvaccess/nvda) for details.
+        * Place the .vscode in this repo within the addon folder, where your add-on source files (will) reside. The settings file within this folder assumes the NVDA repository is within the parent folder of this folder. If your addon folder is within the addonTemplate folder, then your NVDA repository folder needs to also be within the addonTemplate folder, or the source will not be found.
+        * Open the addon folder in VS Code. This should initialize VS Code with the correct settings and provide you with code completion and other VS Code features. 
+	* Press `control+shift+m` after saving a file to search for problems.
+	* Use arrow and tab keys for the autocompletion feature.
+	* Press `control+shift+p` to open the commands palette and search for recommended extensions to install or check if they are installed.
 
-### 動作確認済み、およびキー反転対応の点字ディスプレイ
+## Requirements
 
-以下に、開発者が動作確認した点字ディスプレイを示します。
-うち、キー反転対応作業を行ったものには、（キー反転）と表記してあります。
+You need the following software to use this code for your NVDA add-on development and packaging:
 
-* KGS: Next Touch 40 (キー反転)
-* 日本テレソフト: 精華40 version5 (キー反転)
+* a Python distribution (3.7 or later is recommended). Check the [Python Website](https://www.python.org) for Windows Installers. Please note that at present, preparing the NVDA source code requires the 32-bit version of Python 3.7.
+* Scons - [Website](https://www.scons.org/) - version 4.3.0 or later. You can install it via PIP.
+* GNU Gettext tools, if you want to have localization support for your add-on - Recommended. Any Linux distro or cygwin have those installed. You can find windows builds [here](https://gnuwin32.sourceforge.net/downlinks/gettext.php).
+* Markdown 3.3.0 or later, if you want to convert documentation files to HTML documents. You can install it via PIP.
 
-## 2. 公開場所について
+Note, that you may not need these tools in a local build environment, if you are using [Appveyor](https://appveyor.com/) or [GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions), to build and package your add-ons.
 
-本アドオンは、以下のページにて公開しております。
-最新版のアドオンとともに、更新内容なども案内しておりますのでご確認ください。
+## Usage
 
-* Upside Braille-Down のページ: <a href="https://actlab.org/software/USB-D">https://actlab.org/software/USB-D</a>
+### To create a new NVDA add-on using this template:
 
-## 3. 動作環境
+1. Create an empty folder to hold the files for your add-on.
+2. Copy the folder:
+```
+site_scons
+```
+and the following files, into your new empty folder:
+```
+buildVars.py
+manifest.ini.tpl
+manifest-translated.ini.tpl
+sconstruct
+.gitignore
+.gitattributes
+```
+3. If you intend to use the provided GitHub workflow, also copy the folder:
+```
+.github
+```
+and file:
+```
+.pre-commit-config.yaml
+```
+4. Create an `addon` folder inside your new folder. You will put your code in the usual folders for NVDA extensions, under the `addon` folder. For instance: `globalPlugins`, `synthDrivers`, etc.
+5. In the `buildVars.py` file, change variable `addon_info` with your add-on's information (name, summary, description, version, author, url, source url, license, and license URL). Also, be sure to carefully set the paths contained in the other variables in that file.
+6. Gettext translations must be placed into `addon\locale\<lang>/LC_MESSAGES\nvda.po`.
 
-本アドオンを利用するには、以下の環境が必要です。
+#### Add-on manifest specification
 
-* NVDA 2023.3以降
-* その他、Windows、およびNVDAが快適に動作する環境
+An add-on manifest generated manually or via `buildVars.py` must include the following information:
 
-なお、本アドオンを使用するには、対応の点字ディスプレイとそのドライバーが正しくセットアップされている必要があります。
+* Name (string): a unique identifier for the add-on. It must use camel case (e.g. someModule). This is also used as part of add-on store to identify the add-on uniquely.
+* Summary (string): name as shown on NVDA's Add-ons Manager.
+* Description (string): a short detailed description about the add-on.
+* Version (string), ideally number.number with an optional third number, denoting major.minor.patch.
+* Author (string and an email address): one or more add-on author contact information in the form "name <email@address>".
+* URL (string): a web address where the add-on information can be found (typically community add-ons website address (https://addons.nvda-project.org) is used).
+* docFileName (string): name of the documentation file.
+* minimumNVDAVersion (year.major or year.major.minor): the earliest version of NVDA the add-on is compatible with (e.g. 2019.3). Add-ons are expected to use features introduced in this version of NVDA or declare compatibility with it.
+* lastTestedNVDAVersion (year.major or year.major.minor): the latest or last tested version of NVDA the add-on is said to be compatible with (e.g. 2020.3). Add-on authors are expected to declare this value after testing add-ons with the version of NVDA specified.
+* addon_updateChannel (string or None): the update channel for the add-on release.
 
-## 4. 使い方
+In addition, the following information must be filled out (not used in the manifest but used elsewhere such as add-on store):
 
-### 点字ディスプレイの反転状態を切り替える
+* sourceURL (string): repository URL for the add-on source code.
+* license (string): the license of the add-on and its source code.
+* licenseURL: the URL for the license file.
 
-NVDAメニューから、「Upside Braille-Down」を選択する。
+### To manage documentation files for your addon:
 
-* 「点字ディスプレイの向きをサカサマにする」を選択すると、点字ディスプレイの向きが反転状態になります。
-* 「点字ディスプレイの向きを元に戻す」を選択すると、点字ディスプレイが通常の向きになります。
+1. Copy the `readme.md` file for your add-on to the first created folder, where you copied `buildVars.py`. You can also copy `style.css` to improve the presentation of HTML documents.
+2. Documentation files (named `readme.md`) must be placed into `addon\doc\<lang>/`.
 
-なお、NVDA起動時には、前回終了時の設定になっています。
+### To package the add-on for distribution:
 
+1. Open a command line, change to the folder that has the `sconstruct` file (usually the root of your add-on development folder) and run the `scons` command. The created add-on, if there were no errors, is placed in the current directory.
+2. You can further customize variables in the `buildVars.py` file.
+3. You can also customize version and update channel information from command line by passing the following switches when running scons:
+	* version: add-on version string.
+	* versionNumber: add-on version number of the form major.minor.patch (all integers)
+	* channel: update channel (do not use this switch unless you know what you are doing).
+	* dev: suitable for development builds, names the add-on according to current date (yyyymmdd) and sets update channel to "dev".
 
-### アップデートの確認と実行
+### Additional tools
 
-本アドオンは、機能の更新、および不具合の修正などのため、アップデートが提供されることがあります。
-アドオンのアップデートは、NVDAメニューから「Upside Braille-Down」を選択し、「アップデートの確認」を実行することでいつでも確認することができます。
-アップデートが見つかると、更新を促すメッセージが表示されます。案内に従ってアップデート作業を行ってください。
+The template includes configuration files for use with additional tools such as linters. These include:
 
-また、本アドオンには、NVDA起動時に自動でアップデートを確認する機能が搭載されています。
-NVDAメニューから「Upside Braille-Down」を選択し、「起動時のアップデートの確認を無効化」あるいは「起動時のアップデートの確認を有効化」を実行することで設定を変更できます。
+* Flake8 (flake8.ini): a Python code linter (3.7.9 or later, can be installed with PIP).
 
-## 5. 著作権
+Read the documentation for the tools you wish to use when building and developing add-ons.
 
-(c) 2021 Hiroki Fujii - ACT Laboratory
+Note that this template only provides a basic add-on structure and build infrastructure. You may need to adapt it for your specific needs such as using additional tools.
 
-GNU General Public License, version 2 or later. (一部を除く)
-
-* URL: <a href="https://actlab.org/">https://actlab.org/</a>
-
-
-## 6. ご寄付・ご協力のお願い
-
-ACT Laboratory(Accessible Tools Laboratory)は、プログラミングを学ぶ視覚障害者の集まりです。<br>
-本アドオンは無償ですが、公開には多少の経費も掛かっています。
-
-本アドオンを気に入っていただけた方などで、活動にご支援・ご協力を頂ける方がいらっしゃいましたら、ぜひお力をお貸しください。
-なお、ご支援を頂きました方につきましては、TwitterやACT Laboratoryサイトにてご紹介させて頂く予定です。
-
-詳しくはこちらへ<br>
-<a href="https://actlab.org/donate/">https://actlab.org/donate/</a>
-
-
-## 7. 更新履歴
-
-* 1.0.0 (2024/02/23)
-    * 初回リリース
-
-## 8. 問い合わせ先
-
-本アドオンを利用しての感想やご要望、不具合のご報告などは、以下のメールアドレスまたは掲示板へご連絡ください。
-
-* ACT Laboratory サポート: support@actlab.org
-* ACT Laboratory 掲示板: <a href="https://actlab.org/bbs/">https://actlab.org/bbs/</a>
-
-GitHubリポジトリは、こちらです。
-
-* <a href="https://github.com/actlaboratory/USB-D">https://github.com/actlaboratory/USB-D</a>
+If you have any issues please use the NVDA addon list mentioned above.

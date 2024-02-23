@@ -1,7 +1,6 @@
 nvda/
 .venv/
 addon/doc/*.css
-addon/doc/en/
 *_docHandler.py
 *.html
 manifest.ini

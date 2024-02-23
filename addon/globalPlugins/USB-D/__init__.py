@@ -10,6 +10,11 @@ from .inputManagerPatch import InputManagerPatch
 from .brailleHandlerPatch import BrailleHandlerPatch
 from . import configUtil
 
+try:
+	import addonHandler
+	addonHandler.initTranslation()
+except:
+	_ = lambda x : x
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):

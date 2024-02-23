@@ -6,7 +6,7 @@
 #Copyright (C) 2021 Hiroki Fujii <hiroki@efuji.jp>
 
 #constantsのimport前に必要
-from audioop import add
+
 import os
 import sys
 sys.path.append(os.getcwd())
@@ -40,6 +40,11 @@ class build:
 
 		# addonフォルダの存在を確認
 		if not os.path.exists("addon"):
+			print("Error: no addon folder found. Your working directory must be the root of the project. You shouldn't cd to tools and run this script.")
+			exit(-1)
+
+		# addonフォルダの存在を確認
+		if not os.path.exists("addon\\locale\\ja"):
 			print("Error: no addon folder found. Your working directory must be the root of the project. You shouldn't cd to tools and run this script.")
 			exit(-1)
 

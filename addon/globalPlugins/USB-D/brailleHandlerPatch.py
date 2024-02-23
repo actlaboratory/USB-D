@@ -1,4 +1,4 @@
-#Copyright (C) 2021-2024 Hiroki Fujii <hiroki@efuji.jp>
+#Copyright (C) 2024 Hiroki Fujii <hiroki@efuji.jp>
 
 import braille
 from . import configUtil
@@ -30,7 +30,7 @@ class BrailleHandlerPatch:
     driverDisplayOriginal = None
     handlerWriteCellsOriginal = None
     handleBgThreadExecutorOriginal = None
-    
+
     def turnOverData(data):
         result = []
         for d in data:
@@ -46,6 +46,7 @@ class BrailleHandlerPatch:
             return data
         else:
             return BrailleHandlerPatch.turnOverData(data)
+
     def driverDisplay(data):
         data = BrailleHandlerPatch.processData(data)
         return BrailleHandlerPatch.driverDisplayOriginal(data)

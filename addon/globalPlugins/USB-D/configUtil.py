@@ -22,4 +22,8 @@ def setEnableTurnOverSetting(val):
     config.conf[CONFIG_GLOBAL_KEY]["enableTurnOver"] = val
 
 def initializeSettings():
-    config.conf[CONFIG_GLOBAL_KEY] = {}
+    confspec = {
+        "checkForUpdatesOnStartup": "boolean(default=True)",
+        "enableTurnOver": "boolean(default=True)",
+    }
+    config.conf.spec[CONFIG_GLOBAL_KEY] = confspec

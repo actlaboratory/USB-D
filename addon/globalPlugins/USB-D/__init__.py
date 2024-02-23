@@ -23,8 +23,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         super(GlobalPlugin, self).__init__(*args, **kwargs)
         configUtil.initializeSettings()
         
+        self.autoUpdateChecker = updater.AutoUpdateChecker()
         if configUtil.getAutoUpdateCheckSetting():
-            self.autoUpdateChecker = updater.AutoUpdateChecker()
             self.autoUpdateChecker.autoUpdateCheck(mode=updater.AUTO)
         
         BrailleHandlerPatch.handlerWriteCellsOriginal = braille.BrailleHandler._writeCells

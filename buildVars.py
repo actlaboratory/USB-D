@@ -12,9 +12,9 @@
 def _(arg):
 	return arg
 
-ADDON_NAME = "UpSideBraille-Down"
+ADDON_NAME = "USB-D"
 ADDON_KEYWORD = "USB-D"
-ADDON_VERSION = "1.0.1"
+ADDON_VERSION = "1.0.0"
 ADDON_RELEASE_DATE = "2024-02-23"
 
 # Add-on information variables

@@ -86,7 +86,7 @@ NVDAメニューから「Upside Braille-Down」を選択し、「起動時のア
 
 ## 5. 著作権
 
-(c) 2021 Hiroki Fujii - ACT Laboratory
+(c) 2024 Hiroki Fujii - ACT Laboratory
 
 GNU General Public License, version 2
 

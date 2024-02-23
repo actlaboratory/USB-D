@@ -86,7 +86,7 @@ You can change the setting by selecting "Upside Braille-Down" from the NVDA menu
 
 ## 5. Copyright
 
-(c) 2021 Hiroki Fujii - ACT Laboratory
+(c) 2024 Hiroki Fujii - ACT Laboratory
 
 GNU General Public License, version 2
 

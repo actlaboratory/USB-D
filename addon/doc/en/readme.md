@@ -107,7 +107,7 @@ Click here for details<br>
 
 ## 7. Update history
 
-* 1.0.0 (2024/02/23)
+* 1.0.0 (2024/02/24)
      * Initial release
 
 ## 8. Contact information

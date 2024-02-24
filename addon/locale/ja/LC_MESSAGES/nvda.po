@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 'UpSideBraille-Down' '0.1.0'\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2024-02-23 14:32+0900\n"
-"PO-Revision-Date: 2024-02-23 18:17+0900\n"
+"POT-Creation-Date: 2024-02-24 20:20+0900\n"
+"PO-Revision-Date: 2024-02-24 20:27+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -18,23 +18,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: addon\globalPlugins\USB-D\__init__.py:44
+#: addon\globalPlugins\USB-D\__init__.py:50
 msgid "点字ディスプレイの向きを切り替えます。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:58
+msgid ""
+"起動時に自動でアップデートを確認するかどうかを切り替えま"
+"す。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:65
+msgid "アップデートを確認"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:66
+msgid "アップデートを手動で確認します。"
 msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on
 #. to be shown on installation and add-on information found in Add-ons Manager.
-#: addon\globalPlugins\USB-D\__init__.py:50 buildVars.py:27
+#: addon\globalPlugins\USB-D\__init__.py:73 buildVars.py:27
 msgid "Upside Braille-Down"
 msgstr ""
 
-#: addon\globalPlugins\USB-D\__init__.py:54
+#: addon\globalPlugins\USB-D\__init__.py:77
 msgid "点字ディスプレイの向きを元に戻す(&S)"
 msgstr ""
 
-#: addon\globalPlugins\USB-D\__init__.py:54
+#: addon\globalPlugins\USB-D\__init__.py:77
 msgid "点字ディスプレイの向きをサカサマにする(&S)"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:80
+msgid "起動時のアップデートの確認を無効化"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:80
+msgid "起動時のアップデートの確認を有効化"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:93
+msgid "NVDA起動時に、自動でアップデートを確認します。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:94
+msgid "NVDA起動時に、自動でアップデートを確認しません。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\__init__.py:96
+msgid "設定完了"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:77
+msgid ""
+"アップデートサーバに接続できません。\n"
+"インターネット接続を確認してください。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:78
+#: addon\globalPlugins\USB-D\updater_ja.py:83
+#: addon\globalPlugins\USB-D\updater_ja.py:94
+msgid "エラー"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:83
+msgid "アップデートサーバに接続できません。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:93
+msgid ""
+"アップデート情報が誤っています。\n"
+"詳しくは、ACT Laboratory までお問い合わせください。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:101
+msgid ""
+"アップデートが見つかりませんでした。\n"
+"このバージョンは、最新です。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:101
+#: addon\globalPlugins\USB-D\updater_ja.py:106
+#: addon\globalPlugins\USB-D\updater_ja.py:111
+#: addon\globalPlugins\USB-D\updater_ja.py:116
+msgid "アップデートの確認"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:105
+msgid ""
+"リクエストパラメータが誤っています。開発者にお問い合わせ"
+"ください。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:110
+msgid ""
+"このアップデータは、登録されていません。開発者にお問い合"
+"わせください。"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:115
+msgid ""
+"アップデートが見つかりましたが、このバージョンからのアッ"
+"プデートができません。ソフトウェアのWebサイトを確認してく"
+"ださい。"
+msgstr ""
+
+#. end set hash
+#: addon\globalPlugins\USB-D\updater_ja.py:127
+msgid "アップデート確認"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:128
+#, python-brace-format
+msgid ""
+"{summary} Ver.{newVersion} が利用可能です。\n"
+"アップデートしますか？\n"
+"現在のバージョン: {currentVersion}\n"
+"新しいバージョン: {newVersion}"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:154
+msgid "アドオンのアップデートをダウンロードしています"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:155
+msgid "接続中"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:167
+msgid ""
+"アドオンのアップデートのダウンロード中にエラーが発生しま"
+"した"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:234
+msgid "アドオンをアップデートしています"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:235
+msgid "アドオンがアップデートされるまでお待ちください"
+msgstr ""
+
+#: addon\globalPlugins\USB-D\updater_ja.py:242
+#, python-format
+msgid "%sのアップデートに失敗しました。"
 msgstr ""
 
 #. Add-on description

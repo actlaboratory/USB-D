@@ -11,6 +11,7 @@ addonVersion = curAddon.manifest["version"]
 addonDocFileName = curAddon.manifest["docFileName"]
 homepageURL = "https://actlab.org"
 updateURL = "%s/api/checkUpdate" % homepageURL
+updaterUserAgent = "actlaboratory NVDA addon Updator Ver1.0.0"
 
 UPDATER_NEED_UPDATE = 200
 UPDATER_LATEST = 204

@@ -92,6 +92,8 @@ class build:
 		print("Building...")
 		os.mkdir(package_path)
 		shutil.copyfile("addon\\doc\\ja\\readme.md", os.path.join(package_path, "readme_ja.txt"))
+		if os.path.exists("addon\\doc\\en\\readme.md"):
+			shutil.copyfile("addon\\doc\\en\\readme.md", os.path.join(package_path, "readme_en.txt"))
 		shutil.copyfile("license", os.path.join(package_path, "license.txt"))
 		if os.path.isdir("public"):
 			print("copying public files...")

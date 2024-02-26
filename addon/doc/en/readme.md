@@ -24,7 +24,7 @@ Upside Braille-Down (USB-D) is an add-on that allows you to use a braille displa
 * Braille display can be used in both upper and lower positions<br>
      By using the Braille display upside down, you can bring the PC keyboard and Braille cell closer together when using a display with the cell in front.
 * Invert braille display and key switches<br>
-     The cell display and cursor routing switch (touch cursor keys) on compatible braille displays will be inverted.
+     The cell display and cursor routing switch on compatible braille displays will be inverted.
      Additionally, line scroll keys, arrow keys, and some other braille input keys are also reversed on supported braille displays.
 * You can enable or disable inversion<br>
      You can toggle whether or not to invert the braille display from the NVDA menu, depending on the current situation.
@@ -110,12 +110,15 @@ Click here for details<br>
 * 1.0.0 (2024/02/24)
      * Initial release
 
+* 1.0.1 (2024/02/24)
+     * fix updater
+
 ## 8. Contact information
 
 If you have any impressions, requests, or reports of bugs while using this add-on, please contact us at the email address below or on the bulletin board.
 
 * ACT Laboratory support: support@actlab.org
-* ACT Laboratory bulletin board: <a href="https://actlab.org/bbs/">https://actlab.org/bbs/</a>
+* ACT Laboratory BBS: <a href="https://actlab.org/bbs/">https://actlab.org/bbs/</a>
 
 The GitHub repository is here.
 

@@ -9,7 +9,7 @@ import globalPluginHandler
 from .inputManagerPatch import InputManagerPatch
 from .brailleHandlerPatch import BrailleHandlerPatch
 from . import configUtil
-from . import updater_ja as updater
+from . import updater as updater
 
 try:
 	import addonHandler

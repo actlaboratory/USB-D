@@ -107,8 +107,11 @@ Click here for details<br>
 
 ## 7. Update history
 
+* 1.0.2 (2025/02/25)
+    * Compatible with NVDA 2025.1
+
 * 1.0.0 (2024/02/24)
-     * Initial release
+    * Initial release
 
 * 1.0.1 (2024/02/24)
      * fix updater

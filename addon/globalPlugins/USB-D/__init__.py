@@ -9,7 +9,8 @@ import globalPluginHandler
 from .inputManagerPatch import InputManagerPatch
 from .brailleHandlerPatch import BrailleHandlerPatch
 from . import configUtil
-from . import updater_ja as updater
+from . import updater as updater
+from .compat import messageBox
 
 try:
 	import addonHandler
@@ -93,7 +94,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         msg = _("NVDA起動時に、自動でアップデートを確認します。") if changed is True else _(
             "NVDA起動時に、自動でアップデートを確認しません。")
         self.updateCheckToggleItem.SetItemLabel(self._updateCheckToggleString())
-        gui.messageBox(msg, _("設定完了"))
+        messageBox(msg, _("設定完了"))
 
     def performUpdateCheck(self, evt):
         updater.AutoUpdateChecker().autoUpdateCheck(mode=updater.MANUAL)

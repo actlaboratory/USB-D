@@ -15,7 +15,7 @@ def _(arg):
 ADDON_NAME = "USB-D"
 ADDON_KEYWORD = "USB-D"
 ADDON_VERSION = "1.0.2"
-ADDON_RELEASE_DATE = "2025-02-25"
+ADDON_RELEASE_DATE = "2025-02-27"
 
 # Add-on information variables
 addon_info = {
